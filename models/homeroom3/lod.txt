@@ -1,0 +1,102 @@
+//THIS SCRIPT WAS WRITTEN BY DIZZKET (http://usagii.net)
+//DO NOT SELL THIS OR ANY MODIFIED VERSION OF THIS SCRIPT.
+//YOU MAY USE THIS SCRIPT IN YOUR CONTENT AS LONG AS YOU LEAVE THIS DISCLAIMER.
+ 
+ 
+ //Enable debug mode.
+ debug = 0;
+ 
+ 
+ 
+//Applicable is a list of all js_id's that will transform at a distance.
+//FORMAT: [nameofjs_id,lod_strength,close model,medium model,far model,etc] (You can provide as many LOD models as you want)
+ 
+ applicable =
+ [
+ ["tree_1","10","tree.dae","treefar.dae","treefarther.dae"],
+ ["tree_2","10","tree.dae","treefar.dae","treefarther.dae"],
+  ["tree_3","10","tree.dae","treefar.dae","treefarther.dae"],
+   ["tree_4","10","tree.dae","treefar.dae","treefarther.dae"],
+    ["tree_5","10","tree.dae","treefar.dae","treefarther.dae"],
+         ["tree_6","10","tree.dae","treefar.dae","treefarther.dae"],
+          ["tree_7","10","tree.dae","treefar.dae","treefarther.dae"],
+           ["tree_8","10","tree.dae","treefar.dae","treefarther.dae"],
+            ["tree_9","10","tree.dae","treefar.dae","treefarther.dae"],
+                 ["tree_10","10","tree.dae","treefar.dae","treefarther.dae"],
+                  ["tree_11","10","tree.dae","treefar.dae","treefarther.dae"],
+                   ["tree_12","10","tree.dae","treefar.dae","treefarther.dae"],
+                    ["tree_13","10","tree.dae","treefar.dae","treefarther.dae"],
+                         ["tree_14","10","tree.dae","treefar.dae","treefarther.dae"],
+                          ["tree_15","10","tree.dae","treefar.dae","treefarther.dae"],
+                           ["tree_16","10","tree.dae","treefar.dae","treefarther.dae"]
+                           
+ 
+ ];
+ 
+ 
+ 
+room.update = function(delta_time) {
+   
+    if (debug == 1)
+    {
+    print(   distance(player.pos,room.objects[applicable[0][0]].pos ));
+    };
+   
+   
+//cycle through list of applicable js_id's
+for (var i=0;i<applicable.length;i++)
+{
+   
+    //cycle through every entrys' model lists, starting at index 1 (0 is the name of the js_id)
+    for(var xx=2;xx<applicable[i].length;xx++)
+    {
+     
+     
+     
+             //If you're farther than any of the checks, become the last model.
+        if (xx == applicable[i].length-1)
+        {
+            if (distance(player.pos,room.objects[applicable[i][0]].pos) > (applicable[i][1])*(xx-1)    )
+            {
+                    room.objects[applicable[i][0]].id = applicable[i][xx];
+            }
+        }
+     
+     
+     
+     
+        //if the distance between the player and the current entry whose name is stored in index 0 is larger than lod_strength (meters) times the entry's position
+        else if (distance(player.pos,room.objects[applicable[i][0]].pos) <= (applicable[i][1])*xx &&    
+       
+       
+       
+        distance(player.pos,room.objects[applicable[i][0]].pos) > (applicable[i][1])*(xx-1)    )
+       
+        {
+        room.objects[applicable[i][0]].id = applicable[i][xx];
+        }
+       
+       
+       
+ 
+       
+       
+       
+    }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ 
+ 
+}
+ 
+ 
+   
+};
+//COPYRIGHT DIZZKET 2015. DO NOT REMOVE THIS LINE.

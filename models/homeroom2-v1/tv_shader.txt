@@ -1,0 +1,78 @@
+uniform int iUseTexture0;
+uniform int iUseTexture1;
+uniform int iUseTexture2;
+uniform int iUseTexture3;
+
+uniform sampler2D iTexture0;
+uniform sampler2D iTexture1;
+uniform sampler2D iTexture2;
+uniform sampler2D iTexture3;
+
+uniform float iGlobalTime;
+
+uniform vec4 iClipPlane;
+uniform int iUseClipPlane;
+uniform vec4 iClipSphere;
+uniform int iUseClipSphere;
+
+uniform int iFogEnabled;
+uniform int iFogMode; //0 - linear, 1 - exp, 2 - exp2
+uniform float iFogDensity;
+uniform float iFogStart;
+uniform float iFogEnd;
+uniform vec3 iFogCol;
+
+varying vec3 iNormal;
+varying vec3 iNormalWorld;
+varying vec3 iNormalCamera;
+varying vec3 iPosition;
+varying vec3 iPositionWorld;
+varying vec3 iPositionCamera;
+
+void main() {
+
+  //clipping plane part of shader
+  if (iUseClipPlane == 1 && dot(iPositionWorld, iClipPlane.xyz) < iClipPlane.w) {
+    discard;
+  } 
+
+  if (iUseClipSphere == 1 && dot(iPositionWorld-iClipSphere.xyz, iPositionWorld-iClipSphere.xyz) > iClipSphere.w * iClipSphere.w) {
+    discard;
+  }
+
+  vec2 tc = gl_TexCoord[0].xy;
+
+  float val = sin(tc.y + iGlobalTime * 1.0);
+
+  if (abs(val) < 0.0125) {
+    tc.x += abs(val)*5.0;   
+  }
+  vec4 color = texture2D(iTexture0, tc);  
+  color.xyz *= sin(tc.y*500.0 + 30.3*iGlobalTime)*0.2 + 0.9;
+  gl_FragColor = color;
+
+  //apply fog
+  if (iFogEnabled == 1) {
+
+    //compute length from eye to fragment
+    float c = length(iPositionCamera);   
+
+    //compute blend value
+    float f;
+    if (iFogMode == 0) {
+      f = (iFogEnd - c) / (iFogEnd - iFogStart);
+    }
+    else if (iFogMode == 1) {
+      f = exp(-iFogDensity * c);
+    }
+    else if (iFogMode == 2) {
+      f = exp(-(iFogDensity * c)*(iFogDensity * c));
+    }
+    f = clamp(f, 0.0, 1.0);   
+
+    //blend with fragment's post-texturing colour using the appropriate blending factor
+    gl_FragColor.xyz = gl_FragColor.xyz * f + iFogCol * (1.0 - f);
+
+  }
+
+}

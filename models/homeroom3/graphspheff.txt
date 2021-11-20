@@ -1,0 +1,8 @@
+uniform sampler2D iChannel0;
+uniform float iGlobalTime;
+
+void main(void) {
+	vec4 col = texture2D(iChannel0,gl_TexCoord[0].st);
+	float i = abs(sin(15.*col.w+iGlobalTime*6.)*3.*col.w)*.7;
+	gl_FragColor = vec4(i*.4,i*.48,i,i+.8);
+}
