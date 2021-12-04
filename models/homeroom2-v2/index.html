@@ -11,30 +11,27 @@
 
         <FireBoxRoom>
 			<Assets>
-				<AssetSound id="tick" src="audio/clocktick/tick.mp3"></AssetSound>
-				<AssetSound id="tock" src="audio/clocktick/tock.mp3"></AssetSound>
+				<AssetSound id="tick" src="tick.mp3"></AssetSound>
+				<AssetSound id="tock" src="tock.mp3"></AssetSound>
 				<!--
               	<AssetImage id="black_radiance" src="textures/night_skybox/grimmnight_cubemap_radiance256.dds" tex_clamp="false" tex_linear="true"></AssetImage>
 				<AssetImage id="black_Irradiance" src="textures/night_skybox/grimmnight_cubemap_irradiance64.dds" tex_clamp="false" tex_linear="true"></AssetImage>
 				-->
-				<AssetImage id="sky_back"  src="textures/night_skybox/grimmnight_back.jpg" ></AssetImage>
-				<AssetImage id="sky_front" src="textures/night_skybox/grimmnight_front.jpg" ></AssetImage>
-				<AssetImage id="sky_right" src="textures/night_skybox/grimmnight_right.jpg" ></AssetImage>
-				<AssetImage id="sky_left"  src="textures/night_skybox/grimmnight_left.jpg" ></AssetImage>
-				<AssetImage id="sky_up"    src="textures/night_skybox/grimmnight_up.jpg" ></AssetImage>
-				<AssetImage id="sky_down"  src="textures/night_skybox/grimmnight_down.jpg" ></AssetImage>
+				<AssetImage id="sky_back"  src="grimmnight_back.jpg" ></AssetImage>
+				<AssetImage id="sky_front" src="grimmnight_front.jpg" ></AssetImage>
+				<AssetImage id="sky_right" src="grimmnight_right.jpg" ></AssetImage>
+				<AssetImage id="sky_left"  src="grimmnight_left.jpg" ></AssetImage>
+				<AssetImage id="sky_up"    src="grimmnight_up.jpg" ></AssetImage>
+				<AssetImage id="sky_down"  src="grimmnight_down.jpg" ></AssetImage>
 
               	<AssetImage id="water_particle" src="water2.png" ></AssetImage>
 
               	<AssetImage id="fount" src="fount.png" ></AssetImage>
 
-				<AssetImage id="black_radiance" src="textures/black_radiance.dds" tex_clamp="false" tex_linear="true"></AssetImage>-->
-        		<AssetImage id="black_Irradiance" src="textures/black_irradiance.dds" tex_clamp="false" tex_linear="true"></AssetImage>-->
-
-				<AssetImage id="spooky" src="thumbs/SpookyRestaurant.png"></AssetImage>
-				<AssetImage id="restaurant" src="thumbs/Restaurant.png"></AssetImage>
-				<AssetImage id="invaders" src="thumbs/SpaceInvaders.png"></AssetImage>
-				<AssetImage id="chat" src="thumbs/ChatChatChat.png"></AssetImage>
+				<AssetImage id="spooky" src="SpookyRestaurant.png"></AssetImage>
+				<AssetImage id="restaurant" src="Restaurant.png"></AssetImage>
+				<AssetImage id="invaders" src="SpaceInvaders.png"></AssetImage>
+				<AssetImage id="chat" src="ChatChatChat.png"></AssetImage>
 
 
 				<AssetObject id="tree" src="Tree-Original.gltf" ></AssetObject>
@@ -63,7 +60,7 @@
 
 
 			</Assets>
-			<Room locked="false" pos="5.000 0.130 -5.000" ambient="1.00 1.00 1.00" flying="false" gravity="-9.8" shadows="true">
+			<Room locked="false" pos="5.000 0.330 -5.000" ambient="1.00 1.00 1.00" flying="false" shadows="true" skybox_right_id="sky_right" skybox_left_id="sky_left" skybox_up_id="sky_up" skybox_down_id="sky_down" skybox_front_id="sky_front" skybox_back_id="sky_back">
 				<Object id="homeroom" pos="0 0 0" scale="1.0 1.0 1.0" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" collision_id="homeroom-col" locked="false" cull_face="none" />
               
                 <!-- Trees outside -->
