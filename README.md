@@ -21,10 +21,10 @@ Modified by Souce
 
 ![](https://i.imgur.com/TaVuPxQ.png)
 
-Demo 1: https://web.janusxr.org/1.5.32/#janus.url=https%3A%2F%2Fjvr.junkonet.org%2F
-Demo 2: https://madjin.github.io/webxr-lobby/models/homeroom2-v2/index.html
-Spoke: https://hubs.mozilla.com/scenes/FHyaNN7
-Hubs: https://hubs.mozilla.com/uruxb42/trusting-brilliant-sphere
+- Demo 1: https://web.janusxr.org/1.5.32/#janus.url=https%3A%2F%2Fjvr.junkonet.org%2F
+- Demo 2: https://madjin.github.io/webxr-lobby/models/homeroom2-v2/index.html
+- Spoke: https://hubs.mozilla.com/scenes/FHyaNN7
+- Hubs: https://hubs.mozilla.com/uruxb42/trusting-brilliant-sphere
 
 ## Homeroom3
 
