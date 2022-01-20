@@ -26,11 +26,26 @@ Modified by Souce
 - Spoke: https://hubs.mozilla.com/scenes/FHyaNN7
 - Hubs: https://hubs.mozilla.com/uruxb42/trusting-brilliant-sphere
 
+**Winter edition**
+
+Winter themed version that comes with gltf and spoke scene file, created for some holiday events
+
+![brave_G7Nrr990AP](https://user-images.githubusercontent.com/32600939/150271049-b4efa702-c18b-4fcb-9c1c-738ae4c35c3f.png)
+
+- Spoke: https://hubs.mozilla.com/scenes/74aN5cy
+- Hubs: https://hubs.mozilla.com/xYbpp9E/considerate-distinct-world
+
 ## Homeroom3
 
 ![](https://i.imgur.com/wPvxAMm.png)
 
 Demo: https://vesta.janusxr.org/bepis/nordic-lobby
+
+## Homeroom4
+
+![image](https://user-images.githubusercontent.com/32600939/150272266-fe9dcc56-4c77-457a-8df7-48213edc2176.png)
+
+Demo: https://web.janusxr.org/#janus.url=https%3A%2F%2Fwww.janusxr.org%2Fnewlobby%2Findex.html
 
 ---
 
