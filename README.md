@@ -26,6 +26,14 @@ Modified by Souce
 - Spoke: https://hubs.mozilla.com/scenes/FHyaNN7
 - Hubs: https://hubs.mozilla.com/uruxb42/trusting-brilliant-sphere
 
+**Winter version**
+
+Winter themed version decorated for holiday events, gltf + spoke file included
+
+![brave_G7Nrr990AP](https://user-images.githubusercontent.com/32600939/150269503-08bb7f1e-c168-4b61-afe4-25136de72fb0.png)
+
+
+
 ## Homeroom3
 
 ![](https://i.imgur.com/wPvxAMm.png)
