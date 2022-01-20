@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+	<head>
+		<meta charset="utf-8">
+		<title>
+			Homeroom2 V2.1
+		</title>
+	</head>
+	<body>
+
+        <FireBoxRoom>
+			<Assets>
+				<AssetSound id="tick" src="tick.mp3"></AssetSound>
+				<AssetSound id="tock" src="tock.mp3"></AssetSound>
+				<!--
+              	<AssetImage id="black_radiance" src="textures/night_skybox/grimmnight_cubemap_radiance256.dds" tex_clamp="false" tex_linear="true"></AssetImage>
+				<AssetImage id="black_Irradiance" src="textures/night_skybox/grimmnight_cubemap_irradiance64.dds" tex_clamp="false" tex_linear="true"></AssetImage>
+				-->
+				<AssetImage id="sky_back"  src="grimmnight_back.jpg" ></AssetImage>
+				<AssetImage id="sky_front" src="grimmnight_front.jpg" ></AssetImage>
+				<AssetImage id="sky_right" src="grimmnight_right.jpg" ></AssetImage>
+				<AssetImage id="sky_left"  src="grimmnight_left.jpg" ></AssetImage>
+				<AssetImage id="sky_up"    src="grimmnight_up.jpg" ></AssetImage>
+				<AssetImage id="sky_down"  src="grimmnight_down.jpg" ></AssetImage>
+
+              	<AssetImage id="water_particle" src="water2.png" ></AssetImage>
+
+              	<AssetImage id="fount" src="fount.png" ></AssetImage>
+
+				<AssetImage id="spooky" src="SpookyRestaurant.png"></AssetImage>
+				<AssetImage id="restaurant" src="Restaurant.png"></AssetImage>
+				<AssetImage id="invaders" src="SpaceInvaders.png"></AssetImage>
+				<AssetImage id="chat" src="ChatChatChat.png"></AssetImage>
+
+
+				<AssetObject id="tree" src="Tree-Original.gltf" ></AssetObject>
+				<AssetObject id="homeroom" src="old_homeroom2-v2.1-autumn.gltf" ></AssetObject>
+                <AssetObject id="homeroom-col" src="old_homeroom2-v2.1-col.obj" ></AssetObject>
+              
+              	<AssetObject id="elevator-car" src="elevator_car.fbx" ></AssetObject>
+              	<AssetObject id="elevator-door" src="elevator_door_p1.fbx" ></AssetObject>
+
+              
+              	<AssetObject id="clock_body" src="clock_body.obj" mtl="clock_body.mtl"></AssetObject>
+              	<AssetObject id="clock_hour" src="clock_hand_hours.obj" mtl="clock_hand_hours.mtl"></AssetObject>
+              	<AssetObject id="clock_minute" src="clock_hand_minutes.obj" mtl="clock_hand_minutes.mtl"></AssetObject>
+              	<AssetObject id="clock_second" src="clock_hand_seconds.obj" mtl="clock_hand_seconds.mtl"></AssetObject>
+              
+              	<AssetObject id="wall_spotlight_fixture" src="wall_spotlight_fixture.obj" mtl="wall_spotlight_fixture.mtl"></AssetObject>
+              
+              	<AssetScript src="old_homeroom_clock.js" />
+              	<!--<AssetScript src="js/Homerooms/Old-Homeroom2/old_homeroom_elevator.js" />-->
+				
+
+              	<!--<AssetShader id="water_shader" src="shaders/Water/water.glsl" />-->
+				<!--<AssetShader id="bloom_shader" src="shaders/bloom_frag.glsl" vertex_src="shaders/bloom_vert.glsl"/>-->
+              	
+				<!--<AssetShader id="water_vs" vertex_src="models/old-homeroom/water_vertex.txt" />-->
+
+
+			</Assets>
+			<Room locked="false" pos="5.000 0.330 -5.000" ambient="1.00 1.00 1.00" shadows="true" skybox_right_id="sky_right" skybox_left_id="sky_left" skybox_up_id="sky_up" skybox_down_id="sky_down" skybox_front_id="sky_front" skybox_back_id="sky_back">
+				<Object id="homeroom" pos="0 0 0" scale="1.0 1.0 1.0" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" collision_id="homeroom-col" locked="false" cull_face="none" />
+              
+                <!-- Trees outside -->
+				<!--<Object id="tree" shader_id="tree_vs" pos="-2.437 -0.909 45.355"  fwd="0 0 -1" scale="3.75 3.75 3.75" />
+				<Object id="tree" shader_id="tree_vs" pos="45 -0.909 -2"          fwd="-1 0 0" scale="3.75 3.75 3.75" />
+				<Object id="tree" shader_id="tree_vs" pos="-2.437 -0.909 -45.355" fwd="0 0 1"  scale="3.75 3.75 3.75" />
+				<Object id="tree" shader_id="tree_vs" pos="-45 -0.909 2"          fwd="1 0 0"  scale="3.75 3.75 3.75" />-->
+
+				<!--<Image id="fount" shader_id="water_shader" pos="0 -0.100 0" xdir="1.000 0.000 0.000" ydir="0.000 0.000 -1.000" zdir="0.000 1.000 0.000" scale="3.700 3.700 1.000" />-->
+              	<Image id="fount" pos="0 0 0" xdir="1.000 0.000 0.000" ydir="0.000 0.000 -1.000" zdir="0.000 1.000 0.000" scale="1.9 1.9 1.000" />
+
+              	<Link js_id="linkchatchatchat" thumb_id="chat" pos="-3.91 0.42 -15.46" scale="2.15 2.21 1" url="https://jvr.junkonet.org/?roomid=25" title="ChatChatChat"/>
+				<Link js_id="linkrestaurant" thumb_id="restaurant" pos="-3.91 0.42 15.46" xdir="-1 0 -0.000002" zdir="0.000002 0 -1" scale="2.15 2.21 1" url="https://jvr.junkonet.org/?roomid=5" title="Restaurant"/>
+				<Link js_id="linkspaceinvaders" thumb_id="invaders" pos="3.9 0.42 -15.5" scale="2.11 2.21 1" url="https://jvr.junkonet.org/?roomid=16" title="Space Invaders"/>
+				<Link js_id="linkspookyrestaurant" thumb_id="spooky" pos="-15.469999 0.42 3.9" xdir="0 0 -1" zdir="1 0 0" scale="2.16 2.21 1" url="https://jvr.junkonet.org/?roomid=26" title="Spooky Restaurant"/>
+				<Link js_id="sandbox" pos="15.46 0.42 -3.9" xdir="0 0 1" zdir="-1 0 0" scale="2.15 2.21 1" url="https://vesta.janusxr.org/guide/sandbox" />
+				<Link js_id="vesta" pos="15.46 0.42 3.9" xdir="0 0 1" zdir="-1 0 0" scale="2.15 2.21 1" url="https://vesta.janusxr.org/" />
+
+              	<Object id="clock_body" js_id="clock_body1" locked="false" pos="0 6 0.34"  scale="1 1 1" xdir="-1 0 0" zdir="0 0 -1" ></Object>
+				
+              	<Object id="clock_body" js_id="clock_body2" locked="false" pos="0 6 -0.34"  scale="1 1 1" ></Object>
+            
+              	<Object id="clock_second" js_id="clock_second_hand1" pos="0 6 0.34"  xdir="0.809017 -0.587785 0" ydir="0.587785 0.809017 0" scale="1 1 1" col="#000000" />
+              	<Object id="clock_second" js_id="clock_second_hand2" pos="0 6 -0.34" xdir="0.809017 -0.587785 0" ydir="0.587785 0.809017 0" scale="1 1 1" col="#000000" />
+              
+              	<Object id="clock_minute" js_id="clock_minute_hand1" pos="0 6 0.34" xdir="0.5972 0.802093 0" ydir="-0.802093 0.5972 0" scale="1 1 1" col="#000000" />
+              	<Object id="clock_minute" js_id="clock_minute_hand2" pos="0 6 -0.34" xdir="0.5972 -0.802093 0" ydir="0.802093 0.5972 0" scale="1 1 1" col="#000000" />
+              
+              	<Object id="clock_hour" js_id="clock_hour_hand1" pos="0 6 0.34" xdir="0.565687 -0.82462 0" ydir="0.82462 0.565687 0" scale="1 1 1" col="#000000" />
+              	<Object id="clock_hour" js_id="clock_hour_hand2" pos="0 6 -0.34" xdir="0.565687 0.82462 0" ydir="-0.82462 0.565687 0" scale="1 1 1" col="#000000" />
+              
+              
+              	<Object id="elevator-car" js_id="elevator" pos="-0.08 0 -14.25" scale="1 1 1" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" collision_id="elevator-car" >
+                  	<Object id="cube" js_id="car_to-1" pos="0 1.4 0.76" scale="0.05 0.06 0.1" xdir="0 0 1" ydir="0 1 0" zdir="-1 0 0" collision_id="cube" ></Object>
+                  	<Object id="cube" js_id="car_to-2" pos="0 1.3 0.76" scale="0.05 0.06 0.1" xdir="0 0 1" ydir="0 1 0" zdir="-1 0 0" collision_id="cube" ></Object>
+              	</Object>
+
+           		<Object id="elevator-door" js_id="evd3-f1" pos="1.0 0 -14.24" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" collision_id="elevator-door">
+                   	<Object id="elevator-door" js_id="evd2-f1" pos="0 0 -0.55" collision_id="elevator-door" >
+                   		<Object id="elevator-door" js_id="evd1-f1" pos="0 0 -0.55" collision_id="elevator-door" >
+                       	</Object>
+                   	</Object>
+               	</Object>
+              	<Object id="elevator-door" js_id="evd3-f2" pos="1.0 5.24 -14.24" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" collision_id="elevator-door">
+                   	<Object id="elevator-door" js_id="evd2-f2" pos="0 0 -0.55" collision_id="elevator-door" >
+                   		<Object id="elevator-door" js_id="evd1-f2" pos="0 0 -0.55" collision_id="elevator-door" >
+                       	</Object>
+                   	</Object>
+               	</Object>
+              	<Object id="elevator-door" js_id="evd3-f3" pos="1.0 12.16 -14.24" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" collision_id="elevator-door">
+                   	<Object id="elevator-door" js_id="evd2-f3" pos="0 0 -0.55" collision_id="elevator-door" >
+                   		<Object id="elevator-door" js_id="evd1-f3" pos="0 0 -0.55" collision_id="elevator-door" >
+                       	</Object>
+                   	</Object>
+               	</Object>
+
+				<Link js_id="mirror_surface" pos="-11.5 0.3 -11.5" scale="7.7 4.6 1" xdir="0.707106 0 -0.707108" ydir="0 1 0" zdir="0.707108 0 0.707106" col="0.1 0.1 0.1" auto_load="false" draw_text="false" draw_glow="false" mirror="true" active="true" ></Link>
+              	
+              	<Object id="cube" js_id="btn_up_f1" pos="0.96 1.3 -13.24" scale="0.05 0.06 0.1" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" collision_id="cube" ></Object>
+              	<Object id="cube" js_id="btn_down_f2" pos="0.96 13.9 -13.24" scale="0.05 0.06 0.1" xdir="0 0 -1" ydir="0 1 0" zdir="1 0 0" collision_id="cube" ></Object>
+			</Room>
+		</FireBoxRoom>
+        <script src="https://web.janusxr.org/1.5.33/janusweb.js"></script>
+        <script>elation.janusweb.init({url: document.location.href})</script>
+	</body>
+</html>
