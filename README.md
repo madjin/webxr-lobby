@@ -35,6 +35,15 @@ Winter themed version that comes with gltf and spoke scene file, created for som
 - Spoke: https://hubs.mozilla.com/scenes/74aN5cy
 - Hubs: https://hubs.mozilla.com/xYbpp9E/considerate-distinct-world
 
+**Autumn edition**
+
+Another version, originally designed by Source, that gives the lobby a cozy and welcoming vibe. There are leftover decorations from previous events left on the walls.
+
+![](https://i.imgur.com/33ywYxs.jpg)
+
+- Spoke: https://hubs.mozilla.com/scenes/HkgMSAg
+- Hubs: https://hubs.mozilla.com/qhih6dg/excellent-truthful-meetup
+
 ## Homeroom3
 
 ![](https://i.imgur.com/wPvxAMm.png)
